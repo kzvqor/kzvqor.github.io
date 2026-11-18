@@ -1,0 +1,27 @@
+/* русский язык: пиксельный шрифт с кириллицей, он широкий, поэтому всё мельче */
+html[lang="ru"] {
+    --pix: "Press Start 2P", "Pixelify Sans", ui-monospace, Menlo, monospace;
+}
+
+html[lang="ru"] body { font-size: 11px; line-height: 1.9; }
+html[lang="ru"] h1 { font-size: clamp(20px, 3.6vw, 42px); line-height: 1.35; letter-spacing: 0; font-weight: 400; }
+html[lang="ru"] h3, html[lang="ru"] b { font-weight: 400; }
+html[lang="ru"] .lead { font-size: clamp(11px, 1.4vw, 13px); line-height: 2; max-width: 42ch; }
+html[lang="ru"] .link h3 { font-size: 14px; line-height: 1.5; }
+html[lang="ru"] .link p { font-size: 10px; line-height: 1.9; }
+html[lang="ru"] .cc h3 { font-size: 15px; line-height: 1.5; }
+html[lang="ru"] .cc p { font-size: 10px; line-height: 1.9; }
+html[lang="ru"] .cc small { font-size: 10px; line-height: 1.6; display: block; }
+html[lang="ru"] .sites p { font-size: 10px; line-height: 1.9; }
+html[lang="ru"] .sites h3 { font-size: 17px; line-height: 1.5; }
+html[lang="ru"] .site b { font-size: 11px; }
+html[lang="ru"] .site small { font-size: 9px; line-height: 1.6; }
+html[lang="ru"] .site-soon { font-size: 10px; line-height: 1.6; }
+html[lang="ru"] .brand { font-size: 15px; line-height: 1.3; }
+html[lang="ru"] .brand small { font-size: 9px; margin-top: 4px; }
+html[lang="ru"] .btn { font-size: 11px; padding: 9px 12px; }
+html[lang="ru"] .tag { font-size: 11px; letter-spacing: 0; }
+html[lang="ru"] .sh { font-size: 12px; }
+html[lang="ru"] .sh h2 { font-size: 15px; font-weight: 400; line-height: 1.4; }
+html[lang="ru"] .dom { font-size: 10px; }
+html[lang="ru"] footer { font-size: 11px; }

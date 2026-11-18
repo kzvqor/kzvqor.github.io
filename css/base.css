@@ -1,0 +1,87 @@
+:root {
+    --bg: #f3ebdd;
+    --ink: #1b1a17;
+    --mut: #6b6558;
+    --acc: #a9cc82;
+    --acc-text: #587f33;
+    --mint: #2f7d6b;
+    --sun: #f2b632;
+    --card: #fbf6ea;
+    --px: 8px;
+    --pix: "Pixelify Sans", ui-monospace, Menlo, monospace;
+    --sans: var(--pix);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* тёмная тема: по системе и по кнопке */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #17150f;
+        --ink: #f3ebdd;
+        --mut: #a39b8a;
+        --acc-text: #a9cc82;
+        --mint: #4fb59d;
+        --card: #211e16;
+    }
+}
+
+:root[data-theme="dark"] {
+    --bg: #17150f;
+    --ink: #f3ebdd;
+    --mut: #a39b8a;
+    --acc-text: #a9cc82;
+    --mint: #4fb59d;
+    --card: #211e16;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 18px/1.55 var(--sans);
+    overflow-x: hidden;
+}
+
+a { color: inherit; }
+a, button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+[hidden] { display: none !important; }
+
+:focus-visible {
+    outline: 3px solid var(--acc-text);
+    outline-offset: 3px;
+}
+
+.wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
+}
+
+/* появление блоков при скролле */
+.rv {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .5s, transform .5s steps(6);
+}
+
+.rv.in {
+    opacity: 1;
+    transform: none;
+}
+
+.cc.rv { transition: opacity .5s; }

@@ -1,0 +1,44 @@
+/* кубик */
+.cube-wrap {
+    perspective: 700px;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    height: 130px;
+    margin-top: 20px;
+    width: 150px;
+}
+
+.cube {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: grab;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.cube * {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.cube i {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--ink);
+    font: normal 500 24px "Pixelify Sans", ui-monospace, Menlo, monospace;
+    color: #1b1a17;
+}
+
+.cube i:nth-child(1) { transform: translateZ(36px); background: var(--acc); }
+.cube i:nth-child(2) { transform: rotateY(180deg) translateZ(36px); background: var(--sun); }
+.cube i:nth-child(3) { transform: rotateY(90deg) translateZ(36px); background: #6fd0c0; }
+.cube i:nth-child(4) { transform: rotateY(-90deg) translateZ(36px); background: #2aabee; }
+.cube i:nth-child(5) { transform: rotateX(90deg) translateZ(36px); background: #fbf6ea; }
+.cube i:nth-child(6) { transform: rotateX(-90deg) translateZ(36px); background: #8bd16b; }
