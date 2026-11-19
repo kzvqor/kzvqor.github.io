@@ -19,7 +19,7 @@ function mouseFrame(time) {
         hovered.style.transform = `perspective(600px) rotateX(${-cy * 14}deg) rotateY(${cx * 14}deg) translate(3px,3px)`;
     }
 
-    // след не чаще чем раз в 80мс
+    // след не чаще чем 
     if (time - lastTrail > 80) {
         lastTrail = time;
         spawnParticles(mouseX, mouseY, 1, ["#a9cc82"], 0.4, 0.05);
