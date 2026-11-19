@@ -13,7 +13,7 @@ function animateCube() {
         rotY += speedY;
         rotX += speedX;
         speedX *= 0.95;
-        // совсем не останавливается, всегда крутится медленно
+        // не останавливается, всегда крутится медленно
         if (Math.abs(speedY) < 0.4) {
             speedY = speedY < 0 ? -0.4 : 0.4;
         } else {
