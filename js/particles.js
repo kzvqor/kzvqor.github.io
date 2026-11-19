@@ -1,4 +1,4 @@
-// частицы на canvas
+// частицы
 const canvas = document.createElement("canvas");
 canvas.setAttribute("aria-hidden", "true");
 canvas.style.cssText = "position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9";
@@ -9,7 +9,7 @@ let particles = [];
 let animId = 0;
 
 function resizeCanvas() {
-    // на телефоне при скролле меняется высота (адресная строка), это игнорим
+    // на телефоне при скролле меняется высота (адресная строка)
     if (innerWidth === canvas.width && Math.abs(innerHeight - canvas.height) < 160) return;
     canvas.width = innerWidth;
     canvas.height = innerHeight;
