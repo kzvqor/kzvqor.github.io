@@ -13,4 +13,4 @@ document.querySelectorAll(".rv").forEach((el) => observer.observe(el));
 
 setLanguage("en");
 
-if (location.hash === "#credits") showPage("credits");
+showPage(location.hash.slice(1));

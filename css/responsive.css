@@ -44,3 +44,11 @@
         transform: none;
     }
 }
+
+@media (max-width: 760px) {
+    .projects { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+    .proj { box-shadow: 5px 5px 0 var(--acc); }
+}

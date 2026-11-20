@@ -25,3 +25,12 @@ html[lang="ru"] .sh { font-size: 12px; }
 html[lang="ru"] .sh h2 { font-size: 15px; font-weight: 400; line-height: 1.4; }
 html[lang="ru"] .dom { font-size: 10px; }
 html[lang="ru"] footer { font-size: 11px; }
+
+/* проекты и сайт на русском */
+html[lang="ru"] .proj h3 { font-size: 17px; line-height: 1.4; }
+html[lang="ru"] .proj p { font-size: 10px; line-height: 1.9; }
+html[lang="ru"] .proj-id { font-size: 10px; }
+html[lang="ru"] .chips span { font-size: 9px; line-height: 1.6; }
+html[lang="ru"] .proj-open { font-size: 10px; line-height: 1.6; }
+html[lang="ru"] .proj-soon h3 { font-size: 13px; line-height: 1.5; }
+html[lang="ru"] .proj-soon p { font-size: 10px; line-height: 1.9; }

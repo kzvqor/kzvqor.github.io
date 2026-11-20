@@ -12,24 +12,31 @@ function setLanguage(l) {
     });
 }
 
+const pages = ["links", "sites", "projects", "credits"];
+
 function showPage(name) {
-    const credits = name === "credits";
+    if (!pages.includes(name)) return;
 
-    $("p-links").hidden = credits;
-    $("p-credits").hidden = !credits;
-    $("n-links").setAttribute("aria-pressed", String(!credits));
-    $("n-credits").setAttribute("aria-pressed", String(credits));
+    pages.forEach((p) => {
+        $("p-" + p).hidden = p !== name;
+        $("n-" + p).setAttribute("aria-pressed", String(p === name));
+    });
 
+    // на file:// браузер может запретить менять адрес, это не критично
+    try { history.replaceState(null, "", "#" + name); } catch (e) {}
     scrollTo({ top: 0, behavior: "instant" });
 
     // блоки новой страницы сразу показываем
-    document.querySelectorAll(credits ? "#p-credits .rv" : "#p-links .rv").forEach((el) => {
+    document.querySelectorAll("#p-" + name + " .rv").forEach((el) => {
         el.classList.add("in");
     });
 }
 
-$("n-links").onclick = () => showPage("links");
-$("n-credits").onclick = () => showPage("credits");
+pages.forEach((p) => {
+    $("n-" + p).onclick = () => showPage(p);
+});
+
+addEventListener("hashchange", () => showPage(location.hash.slice(1)));
 $("lang").onclick = () => setLanguage(lang === "ru" ? "en" : "ru");
 
 $("theme").onclick = () => {
